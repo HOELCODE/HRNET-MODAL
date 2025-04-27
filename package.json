@@ -1,7 +1,12 @@
 {
   "name": "hrnet-modal-hoel",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HOELCODE/HRNET-MODAL.git"
+    },
+  "homepage": "https://github.com/HOELCODE/HRNET-MODAL#readme",  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
