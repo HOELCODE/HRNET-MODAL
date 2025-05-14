@@ -280,7 +280,7 @@ function oe() {
 }
 var i = oe();
 const ae = () => {
-  const s = document.querySelector(".modal"), f = document.querySelector(".home-container");
+  const s = document.querySelector(".modal"), f = document.querySelector(".modal-container");
   document.querySelector(".close").addEventListener("click", () => {
     f.style.filter = "none", s.style.display = "none", s.classList.remove("modal-showed");
   });
@@ -292,7 +292,7 @@ const ae = () => {
   /* @__PURE__ */ i.jsx("style", { children: `
 
                     .modal-container {
-                    display: flex;
+                    display: none;
                     justify-content: center;
                     align-items: center;
                     position: fixed;

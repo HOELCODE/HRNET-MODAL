@@ -5,7 +5,7 @@ const closeModal = () => {
 
     //Actions
     cross.addEventListener('click', () => {
-        page.style.filter = "none";
+        page.style.display = "none";
         modal.style.display = "none";
         modal.classList.remove('modal-showed')
     })
@@ -40,7 +40,6 @@ const Modal = () => {
                     height: 100%;
                     background-color: rgba(0, 0, 0, 0.5);
                     z-index: 999;
-                    filter: blur(2px);
                     transition: filter 0.3s ease;
                     }
 
