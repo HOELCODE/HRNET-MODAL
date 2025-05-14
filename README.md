@@ -13,7 +13,7 @@ import { Modal } from 'hrnet-modal-hoel';
 
 - 2.2/ Dans la partie html ajouter la balise suivante : 
 
-<Modal />
+`<Modal />`
 
 - 2.3/ Ajouter le code suivant afin d'afficher le modal : 
 
@@ -21,7 +21,6 @@ const showModal = () => {
     const modal = document.querySelector('.modal');
     const page = document.querySelector('.home-container');
 
-    //Actions
     page.style.filter = "blur(5px)";
     modal.style.display = 'block';
     modal.classList.add('modal-showed');
