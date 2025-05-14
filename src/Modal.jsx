@@ -1,6 +1,6 @@
 const closeModal = () => {
     const modal = document.querySelector('.modal');
-    const page = document.querySelector('.home-container');
+    const page = document.querySelector('.modal-container');
     const cross = document.querySelector('.close');
 
     //Actions
@@ -30,7 +30,7 @@ const Modal = () => {
                 {`
 
                     .modal-container {
-                    display: flex;
+                    display: none;
                     justify-content: center;
                     align-items: center;
                     position: fixed;
