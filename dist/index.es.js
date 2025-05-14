@@ -15,16 +15,16 @@ function te() {
   $ = 1;
   var s = Symbol.for("react.transitional.element"), f = Symbol.for("react.fragment");
   function d(p, a, l) {
-    var b = null;
-    if (l !== void 0 && (b = "" + l), a.key !== void 0 && (b = "" + a.key), "key" in a) {
+    var E = null;
+    if (l !== void 0 && (E = "" + l), a.key !== void 0 && (E = "" + a.key), "key" in a) {
       l = {};
-      for (var E in a)
-        E !== "key" && (l[E] = a[E]);
+      for (var b in a)
+        b !== "key" && (l[b] = a[b]);
     } else l = a;
     return a = l.ref, {
       $$typeof: s,
       type: p,
-      key: b,
+      key: E,
       ref: a !== void 0 ? a : null,
       props: l
     };
@@ -125,14 +125,14 @@ function ne() {
     function l() {
       return Error("react-stack-top-frame");
     }
-    function b(e) {
+    function E(e) {
       if (P.call(e, "key")) {
         var r = Object.getOwnPropertyDescriptor(e, "key").get;
         if (r && r.isReactWarning) return !1;
       }
       return e.key !== void 0;
     }
-    function E(e, r) {
+    function b(e, r) {
       function t() {
         N || (N = !0, console.error(
           "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
@@ -150,7 +150,7 @@ function ne() {
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
-    function z(e, r, t, n, u, c, g, j) {
+    function z(e, r, t, n, u, c, g, y) {
       return t = c.ref, e = {
         $$typeof: S,
         type: e,
@@ -179,10 +179,10 @@ function ne() {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: j
+        value: y
       }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
     }
-    function w(e, r, t, n, u, c, g, j) {
+    function w(e, r, t, n, u, c, g, y) {
       var o = r.children;
       if (o !== void 0)
         if (n)
@@ -213,12 +213,12 @@ React keys must be passed directly to JSX without using spread:
           o
         ), I[o + n] = !0);
       }
-      if (o = null, t !== void 0 && (d(t), o = "" + t), b(r) && (d(r.key), o = "" + r.key), "key" in r) {
+      if (o = null, t !== void 0 && (d(t), o = "" + t), E(r) && (d(r.key), o = "" + r.key), "key" in r) {
         t = {};
-        for (var y in r)
-          y !== "key" && (t[y] = r[y]);
+        for (var j in r)
+          j !== "key" && (t[j] = r[j]);
       } else t = r;
-      return o && E(
+      return o && b(
         t,
         typeof e == "function" ? e.displayName || e.name || "Unknown" : e
       ), z(
@@ -229,7 +229,7 @@ React keys must be passed directly to JSX without using spread:
         a(),
         t,
         g,
-        j
+        y
       );
     }
     function O(e) {
@@ -282,7 +282,7 @@ var i = oe();
 const ae = () => {
   const s = document.querySelector(".modal"), f = document.querySelector(".modal-container");
   document.querySelector(".close").addEventListener("click", () => {
-    f.style.filter = "none", s.style.display = "none", s.classList.remove("modal-showed");
+    f.style.display = "none", s.style.display = "none", s.classList.remove("modal-showed");
   });
 }, le = () => /* @__PURE__ */ i.jsxs(i.Fragment, { children: [
   /* @__PURE__ */ i.jsx("div", { className: "modal-container", children: /* @__PURE__ */ i.jsxs("div", { className: "modal", children: [
@@ -302,7 +302,6 @@ const ae = () => {
                     height: 100%;
                     background-color: rgba(0, 0, 0, 0.5);
                     z-index: 999;
-                    filter: blur(2px);
                     transition: filter 0.3s ease;
                     }
 
