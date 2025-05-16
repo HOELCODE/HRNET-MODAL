@@ -11,9 +11,9 @@
 
 import { Modal } from 'hrnet-modal-hoel';
 
-- 2.2/ Dans la partie html ajouter la balise suivante : 
+- 2.2/ Dans la partie html ajouter la balise suivante, en passant dans la props le texte que vous voulez mettre dans le modal : 
 
-`<Modal />`
+`<Modal texte="mon texte"/>`
 
 - 2.3/ Ajouter le code suivant afin d'afficher le modal : 
 ```

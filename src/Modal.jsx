@@ -12,7 +12,7 @@ const closeModal = () => {
 }
 
 
-const Modal = () => {
+const Modal = (texte) => {
     return (
         <>
             <div className="modal-container">
@@ -21,7 +21,7 @@ const Modal = () => {
                         <span className="close">&times;</span>
                     </div>
                     <div className="modal-content">
-                        <h2>Employee Created!</h2>
+                        <h2>{texte}</h2>
                     </div>
                 </div>
             </div>
