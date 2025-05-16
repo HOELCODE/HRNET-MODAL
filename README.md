@@ -16,7 +16,7 @@ import { Modal } from 'hrnet-modal-hoel';
 `<Modal />`
 
 - 2.3/ Ajouter le code suivant afin d'afficher le modal : 
-
+```
     const showModal = () => {
         const modal = document.querySelector('.modal');
         const page = document.querySelector('.modal-container');
@@ -25,7 +25,7 @@ import { Modal } from 'hrnet-modal-hoel';
         modal.style.display = 'block';
         modal.classList.add('modal-showed');
     }
-
+```
 - 2.4/ Appeler la fonction lorsque vous voulez afficher le modal
 
 showModal(); // ça peut-être dans un OnClick, dans un Submit...
