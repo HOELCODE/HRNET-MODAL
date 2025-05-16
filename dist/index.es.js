@@ -13,19 +13,19 @@ var $;
 function te() {
   if ($) return x;
   $ = 1;
-  var s = Symbol.for("react.transitional.element"), f = Symbol.for("react.fragment");
-  function d(p, a, l) {
-    var E = null;
-    if (l !== void 0 && (E = "" + l), a.key !== void 0 && (E = "" + a.key), "key" in a) {
+  var a = Symbol.for("react.transitional.element"), f = Symbol.for("react.fragment");
+  function d(p, s, l) {
+    var b = null;
+    if (l !== void 0 && (b = "" + l), s.key !== void 0 && (b = "" + s.key), "key" in s) {
       l = {};
-      for (var b in a)
-        b !== "key" && (l[b] = a[b]);
-    } else l = a;
-    return a = l.ref, {
-      $$typeof: s,
+      for (var E in s)
+        E !== "key" && (l[E] = s[E]);
+    } else l = s;
+    return s = l.ref, {
+      $$typeof: a,
       type: p,
-      key: E,
-      ref: a !== void 0 ? a : null,
+      key: b,
+      ref: s !== void 0 ? s : null,
       props: l
     };
   }
@@ -44,7 +44,7 @@ var R = {};
 var D;
 function ne() {
   return D || (D = 1, process.env.NODE_ENV !== "production" && function() {
-    function s(e) {
+    function a(e) {
       if (e == null) return null;
       if (typeof e == "function")
         return e.$$typeof === Q ? null : e.displayName || e.name || null;
@@ -77,11 +77,11 @@ function ne() {
             var r = e.render;
             return e = e.displayName, e || (e = r.displayName || r.name || "", e = e !== "" ? "ForwardRef(" + e + ")" : "ForwardRef"), e;
           case H:
-            return r = e.displayName || null, r !== null ? r : s(e.type) || "Memo";
+            return r = e.displayName || null, r !== null ? r : a(e.type) || "Memo";
           case A:
             r = e._payload, e = e._init;
             try {
-              return s(e(r));
+              return a(e(r));
             } catch {
             }
         }
@@ -112,27 +112,27 @@ function ne() {
       if (typeof e == "object" && e !== null && e.$$typeof === A)
         return "<...>";
       try {
-        var r = s(e);
+        var r = a(e);
         return r ? "<" + r + ">" : "<...>";
       } catch {
         return "<...>";
       }
     }
-    function a() {
+    function s() {
       var e = h.A;
       return e === null ? null : e.getOwner();
     }
     function l() {
       return Error("react-stack-top-frame");
     }
-    function E(e) {
+    function b(e) {
       if (P.call(e, "key")) {
         var r = Object.getOwnPropertyDescriptor(e, "key").get;
         if (r && r.isReactWarning) return !1;
       }
       return e.key !== void 0;
     }
-    function b(e, r) {
+    function E(e, r) {
       function t() {
         N || (N = !0, console.error(
           "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
@@ -145,12 +145,12 @@ function ne() {
       });
     }
     function M() {
-      var e = s(this.type);
+      var e = a(this.type);
       return C[e] || (C[e] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
-    function z(e, r, t, n, u, c, g, y) {
+    function z(e, r, t, n, u, c, g, j) {
       return t = c.ref, e = {
         $$typeof: S,
         type: e,
@@ -179,10 +179,10 @@ function ne() {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: y
+        value: j
       }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
     }
-    function w(e, r, t, n, u, c, g, y) {
+    function w(e, r, t, n, u, c, g, j) {
       var o = r.children;
       if (o !== void 0)
         if (n)
@@ -196,7 +196,7 @@ function ne() {
             );
         else O(o);
       if (P.call(r, "key")) {
-        o = s(e);
+        o = a(e);
         var m = Object.keys(r).filter(function(ee) {
           return ee !== "key";
         });
@@ -213,12 +213,12 @@ React keys must be passed directly to JSX without using spread:
           o
         ), I[o + n] = !0);
       }
-      if (o = null, t !== void 0 && (d(t), o = "" + t), E(r) && (d(r.key), o = "" + r.key), "key" in r) {
+      if (o = null, t !== void 0 && (d(t), o = "" + t), b(r) && (d(r.key), o = "" + r.key), "key" in r) {
         t = {};
-        for (var j in r)
-          j !== "key" && (t[j] = r[j]);
+        for (var y in r)
+          y !== "key" && (t[y] = r[y]);
       } else t = r;
-      return o && b(
+      return o && E(
         t,
         typeof e == "function" ? e.displayName || e.name || "Unknown" : e
       ), z(
@@ -226,10 +226,10 @@ React keys must be passed directly to JSX without using spread:
         o,
         c,
         u,
-        a(),
+        s(),
         t,
         g,
-        y
+        j
       );
     }
     function O(e) {
@@ -280,14 +280,14 @@ function oe() {
 }
 var i = oe();
 const ae = () => {
-  const s = document.querySelector(".modal"), f = document.querySelector(".modal-container");
+  const a = document.querySelector(".modal"), f = document.querySelector(".modal-container");
   document.querySelector(".close").addEventListener("click", () => {
-    f.style.display = "none", s.style.display = "none", s.classList.remove("modal-showed");
+    f.style.display = "none", a.style.display = "none", a.classList.remove("modal-showed");
   });
-}, le = () => /* @__PURE__ */ i.jsxs(i.Fragment, { children: [
+}, le = ({ text: a }) => /* @__PURE__ */ i.jsxs(i.Fragment, { children: [
   /* @__PURE__ */ i.jsx("div", { className: "modal-container", children: /* @__PURE__ */ i.jsxs("div", { className: "modal", children: [
     /* @__PURE__ */ i.jsx("div", { className: "cross-container", onClick: ae, children: /* @__PURE__ */ i.jsx("span", { className: "close", children: "×" }) }),
-    /* @__PURE__ */ i.jsx("div", { className: "modal-content", children: /* @__PURE__ */ i.jsx("h2", { children: "Employee Created!" }) })
+    /* @__PURE__ */ i.jsx("div", { className: "modal-content", children: /* @__PURE__ */ i.jsx("h2", { children: a }) })
   ] }) }),
   /* @__PURE__ */ i.jsx("style", { children: `
 

@@ -12,7 +12,7 @@ const closeModal = () => {
 }
 
 
-const Modal = (texte) => {
+const Modal = ({text}) => {
     return (
         <>
             <div className="modal-container">
@@ -21,7 +21,7 @@ const Modal = (texte) => {
                         <span className="close">&times;</span>
                     </div>
                     <div className="modal-content">
-                        <h2>{texte}</h2>
+                        <h2>{text}</h2>
                     </div>
                 </div>
             </div>
